@@ -13,6 +13,7 @@ class TestPub <MiniTest::Test
     @drink4 = Drink.new("whisky", 5.0)
     drinks = [@drink1, @drink2, @drink3, @drink4]
     @pub = Pub.new("The Highlander", 200, drinks)
+    @customer = Customer.new("Henry", 50.0)
   end
 
   def test_pub_test_has_name
@@ -22,4 +23,10 @@ end
 def test_pub_has_till
   assert_equal(200, @pub.till())
 end
+
+def test_has_drinks
+  assert_equal(4, @pub.drinks().count())
+end
+# def test_pub_serves_drink_to_customer
+
 end
