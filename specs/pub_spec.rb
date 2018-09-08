@@ -27,6 +27,10 @@ end
 def test_has_drinks
   assert_equal(4, @pub.drinks().count())
 end
-# def test_pub_serves_drink_to_customer
 
+ def test_pub_can_serve_drink
+    @pub.serve(@customer, @drink1)
+    assert_equal(46.0, @customer.wallet())
+    assert_equal(204.0, @pub.till())
+  end
 end

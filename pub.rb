@@ -5,6 +5,8 @@ class Pub
   def initialize(name, till, drinks)
     @name = name
     @till = till
-    @drinks = []
+# why can't I just pass the array @drinks = []
+    @drinks = drinks
+
   end
 end
