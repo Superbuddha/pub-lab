@@ -15,8 +15,11 @@ class TestPub <MiniTest::Test
     @pub = Pub.new("The Highlander", 200, drinks)
   end
 
-  def pub_test_has_name
+  def test_pub_test_has_name
     assert_equal("The Highlander", @pub.name())
 end
 
+def test_pub_has_till
+  assert_equal(200, @pub.till())
+end
 end
